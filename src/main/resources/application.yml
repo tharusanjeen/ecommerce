@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ecommerce
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce_db
+    username: tyler
+    password: marla
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+jwt:
+  accessTokenExpiry: 900000
+  refreshTokenExpiry: 1296000000
+  secret: YmNhIGZvdXJ0aCBzZW0gcHJvamVjdCBpIGVjb21tZXJjZSBhcHBsaWNhdGlvbg==
+
+app:
+  base_url: http://localhost:8080

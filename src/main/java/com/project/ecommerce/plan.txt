@@ -1,0 +1,46 @@
+## User Entity
+
+/auth/register                                      // POST request to register user
+/auth/login                                         // POST request to user login
+/auth/refresh                                       // POST request to refresh access token
+
+above endpoints are public as guest user will need access to register and registered users will need access to login.
+
+
+## Category Entity
+
+Public endpoints
+/api/categories                                     // GET request for all the active categories
+/api/categories/{id}                                // GET request for a single active category
+
+Admin endpoints
+/api/admin/categories/create                        // POST request to create a category
+/api/admin/categories                               // GET request to get all active/inactive categories
+/api/admin/categories/{id}                          // GET request to get a single active/inactive category
+/api/admin/categories/update/{id}                   // PUT request to update a category
+/api/admin/categories/patch/{id}                    // PATCH request to update any field of category
+/api/admin/categories/{id}/toggle                   // PATCH request to toggle active/inactive category
+/api/admin/categories/delete/{id}                   // DELETE request to delete a category
+
+
+## Product Entity
+
+Public endpoints
+/api/products                                       // GET request for all products
+/api/products/{id}                                  // GET request for a single products
+
+Admin endpoints
+/api/admin/products/create                          // POST request to create a Product
+/api/admin/products/update/{id}                     // PUT request to update a Product
+/api/admin/products/patch/{id}                      // PATCH request to update specific field of a Product
+/api/admin/products/delete/{id}                     // DELETE request to delete a Product
+
+
+## ProductImage Entity
+
+
+/api/admin/products/{id}/images                     // POST request to upload images
+/api/admin/products/{id}/images                     // GET request to get all images of a product
+/api/admin/products/{id}/images/{imageId}           // DELETE request to delete images
+/api/admin/products/{id}/images                     // DELETE request to delete all images of a product
+/api/admin/products/{id}/images/{imageId}/primary   // PATCH request to update images
